@@ -1,12 +1,23 @@
 /**
  * Created by ethan on 2017-02-07.
  */
+import java.util.*;
 public class Student extends Person {
     String major;
+    List<Course> courseList;
+    boolean fulltime;
+
+    public void addCourse(Course c){
+        if(this.courseList==null)
+            this.courseList=new ArrayList<Course>();
+        this.courseList.add(c);
+    }
 
     public Student(String name, String emailAddress, String major) {
         super(name, emailAddress);
         this.major = major;
+        this.fulltime=fulltime;
+
     }
 
     public String toString() {
